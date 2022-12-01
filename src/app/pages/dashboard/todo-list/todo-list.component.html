@@ -1,0 +1,27 @@
+<button nbButton status="primary" (click)="create()">
+  CREATE TASK
+</button>
+
+<nb-card size="large" style="margin-top:10px ;">
+  <nb-tabset fullWidth>
+
+    <nb-tab tabTitle="Created">
+      <div *ngFor="let item of createdList">
+        <ngx-todo-list-card [data]="[item]"></ngx-todo-list-card>
+      </div>
+    </nb-tab>
+
+    <nb-tab tabTitle="In Progress">
+      <div *ngFor="let item of inProgressList">
+        <ngx-todo-list-card [data]="[item]"></ngx-todo-list-card>
+      </div>
+    </nb-tab>
+
+    <nb-tab tabTitle="Done">
+      <div *ngFor="let item of doneList">
+        <ngx-todo-list-card [data]="[item]"></ngx-todo-list-card>
+      </div>
+
+    </nb-tab>
+  </nb-tabset>
+</nb-card>

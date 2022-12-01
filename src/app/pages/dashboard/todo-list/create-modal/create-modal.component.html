@@ -1,0 +1,14 @@
+<nb-card>
+  <nb-card-header>Create task</nb-card-header>
+  <nb-card-body>
+    <div style="display:flex; flex-direction:column">
+      <input #title nbInput placeholder="Title" style="margin-top:10px;">
+      <input #description nbInput placeholder="Description" style="margin-top:10px;">
+      <input #owner nbInput placeholder="Owner" style="margin-top:10px;">
+    </div>
+  </nb-card-body>
+  <nb-card-footer>
+    <button class="cancel" nbButton status="danger" (click)="cancel()">Cancel</button>
+    <button nbButton status="success" (click)="submit(title.value,description.value,owner.value)">Submit</button>
+  </nb-card-footer>
+</nb-card>

@@ -1,0 +1,32 @@
+<nb-card>
+  <nb-card-header>{{todo.todoName}}</nb-card-header>
+  <nb-card-body>
+    <div>
+      <h5>{{todo.todoOwner}}</h5>
+    </div>
+    <div>
+      <p>{{todo.todoDescription}}</p>
+    </div>
+    <div>
+      <p>{{todo.comments}}</p>
+    </div>
+    <div style="display:flex;">
+      <input type="text" nbInput  fullWidth shape="semi-round" placeholder="Add Comment" [ngModel]="comment">
+      <button nbButton status="info">
+        Add Comment
+      </button>
+    </div>
+
+    <div class="buttons-row" style="margin-top:10px; display:flex; justify-content: center;">
+      <button nbButton status="primary" (click)="openModal()">
+        UPDATE
+      </button>
+      <button nbButton status="warning" (click)="deleteTask()">
+        DELETE
+      </button>
+      <button nbButton status="success" [ngStyle]="{display: buttonShow ? 'block':'none'}" (click)="updateStatus()">
+        Send To {{buttonText}}
+      </button>
+    </div>
+  </nb-card-body>
+</nb-card>

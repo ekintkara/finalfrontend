@@ -1,0 +1,20 @@
+<h1 id="title" class="title">Sign In</h1>
+
+<form #form="ngForm" aria-labelledby="title">
+
+  <div class="form-control-group">
+    <label class="label" for="input-email">UserName</label>
+    <input nbInput fullWidth [(ngModel)]="userName" name="email" id="input-email"
+      placeholder="UserName" autofocus>
+  </div>
+
+  <div class="form-control-group">
+    <label class="label" for="input-password">Password:</label>
+    <input nbInput fullWidth [(ngModel)]="password" name="password" type="password"
+      id="input-password" placeholder="Password">
+  </div>
+
+  <button nbButton fullWidth status="success" (click)="loginClick()">
+    Sign In
+  </button>
+</form>
